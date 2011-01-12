@@ -57,7 +57,7 @@ com.google.appengine.api.users.User"
 					<div id="profile">
 						<br/><br/>
 						<a href="/openscore?page=profile"><img id="img" src="/img/edit.png"/> Modifier profile</a><br/><br/>
-						<a href="<%=userService.createLogoutURL("/openscore?page=bienvenue")%>" id="confirm"><img id="img" src="/img/deco.png"/> Déconnexion</a>
+						<a href="/openscore?page=deconnexion"><img id="img" src="/img/deco.png"/> Déconnexion</a>
 						<br/><br/>
 					</div>
 			
