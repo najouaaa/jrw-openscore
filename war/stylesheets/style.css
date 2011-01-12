@@ -1,0 +1,125 @@
+body{
+	background: #1BB1E6 url(../img/backg.png) repeat-x;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#fenetre{
+	background-image: url("../img/back.png");
+	height:720px;
+	width:820px;
+	margin: 50px auto auto auto;
+	border: 1px solid #000;
+}
+
+#saut{
+	height:10px;
+	width:820px;
+}
+
+#page{
+	background-color: #FFF;
+	height:700px;
+	width:800px;
+	margin: auto;
+}
+
+#menu{
+	background-image: url("../img/bleuef.png");
+	float:left;
+	height:700px;
+	width:180px;
+	color:white;
+}
+
+#ssmenu{
+	margin-top:50px;
+}
+
+#affichage{
+	background-color:white;
+	float:right;
+	height:650px;
+	width:620px;
+}
+
+#membre{
+	font-size: 12px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+#mmd{
+	margin-left: 50px;
+	margin-top: 20px;
+}
+
+#img{
+	border-style: none;
+}
+
+#partie{
+	font-size: 10px;
+	height:170px;
+}
+
+#profile{
+	font-size: 10px;
+}
+
+#bienvenue{
+	text-align: center;
+	margin-top:80px;
+}
+
+#deconnexion{
+	margin: 260px 20px 0px 20px;
+	text-align: center;
+}
+
+.info{
+	color:#66ff66;
+}
+
+#pub {
+	margin-left:30px;
+}
+
+#jrw {
+	height:100px;
+	width:150px;
+	margin-top:20px;
+	margin-left:13px;
+	margin-bottom:20px;
+}
+
+#erreur {
+	text-align:center;
+	margin:auto;
+	margin-top:20px;
+	margin-left:13px;
+	margin-bottom:20px;
+}
+
+label {
+	display:block;
+	width:150px;
+	float:left;
+}
+
+#inscrit {
+	margin-top:150px;
+	margin-left:13px;
+	margin-bottom:20px;
+}
+
+#sauve {
+	margin-top:20px;
+	margin-left:150px;
+}
+
+
+
+
+
+
+

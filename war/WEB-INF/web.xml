@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>OpenScore</servlet-name>
+		<servlet-class>org.jredway.openscore.OpenScoreServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OpenScore</servlet-name>
+		<url-pattern>/openscore</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>redirect.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>ModifierProfile</servlet-name>
+		<servlet-class>org.jredway.dopost.ModifierProfileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModifierProfile</servlet-name>
+		<url-pattern>/openscore/modifierprofile</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>CreerProfile</servlet-name>
+		<servlet-class>org.jredway.dopost.CreerProfileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreerProfile</servlet-name>
+		<url-pattern>/openscore/creerprofile</url-pattern>
+	</servlet-mapping>
+</web-app>
