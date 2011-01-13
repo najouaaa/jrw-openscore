@@ -39,9 +39,7 @@ public class BaseUtilisateur {
     
     // créer un objet détachable pour la modif car sinon impossible
     @SuppressWarnings("unchecked")
-    public Utilisateur getUtilisateur() {
-        
-        
+    public Utilisateur getUtilisateur() {     
         PersistenceManager pm = PMF.get().getPersistenceManager();
         Utilisateur uti, detached = null;
         
@@ -78,8 +76,6 @@ public class BaseUtilisateur {
             if(query.execute(this.user).toString() != "[]"){
                 res = true;
             }
-
-
         } finally {
             pm.close();
         }

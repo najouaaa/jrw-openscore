@@ -8,8 +8,6 @@ import com.google.appengine.api.users.UserServiceFactory;
 
 import javax.servlet.http.*;
 
-
-
 @SuppressWarnings("serial")
 public class CreerProfileServlet extends HttpServlet {
     
@@ -17,7 +15,6 @@ public class CreerProfileServlet extends HttpServlet {
     private User user = null;
     
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        
         this.userService = UserServiceFactory.getUserService();
         this.user = userService.getCurrentUser();
         
@@ -29,7 +26,6 @@ public class CreerProfileServlet extends HttpServlet {
         BaseUtilisateur base = new BaseUtilisateur();
             
         base.ajouter(user, initNom, initPrenom, initIndex);
-        resp.sendRedirect("/openscore?page=profile");
-        
+        resp.sendRedirect("/openscore?page=profile");   
     }
 }
