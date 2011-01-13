@@ -3,9 +3,6 @@ package org.jredway.gml;
 import java.io.*;
 import org.jdom.*;
 import org.jdom.input.*;
-import java.util.List;
-import java.util.Iterator;
-
 
 public class GmlFree {
     
@@ -26,7 +23,5 @@ public class GmlFree {
 
        //On initialise un nouvel élément racine avec l'élément racine du document.
        this.racine = document.getRootElement();
-       
     }
-
 }
