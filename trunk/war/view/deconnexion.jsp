@@ -6,8 +6,10 @@ com.google.appengine.api.users.User"
 %>
 
 <% 
-
 UserService userService = UserServiceFactory.getUserService();
 %>
 
-<a href="<%=userService.createLoginURL(request.getRequestURI())%>" id="confirm">Déconnexion</a>
+<div id="deconnexion">
+	<p>Voulez-vous vraiment vous déconnecter ?</p>
+	<a href="<%=userService.createLoginURL(request.getRequestURI())%>" id="confirm">Déconnexion</a>
+</div>
