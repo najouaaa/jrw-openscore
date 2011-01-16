@@ -1,4 +1,5 @@
-#Mon Jan 03 18:48:04 CET 2011
+#Sun Jan 16 17:55:02 CET 2011
 eclipse.preferences.version=1
+jarsExcludedFromWebInfLib=/Users/killian/Downloads/appengine-java-sdk-1.4.0/lib/tools/jsp/repackaged-appengine-jakarta-jstl-1.1.2.jar|/Users/killian/Downloads/appengine-java-sdk-1.4.0/lib/tools/jsp/repackaged-appengine-jakarta-standard-1.1.2.jar
 warSrcDir=war
 warSrcDirIsOutput=true
