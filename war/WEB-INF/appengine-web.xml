@@ -6,9 +6,6 @@
 	<!-- Configure java.util.logging -->
 	<system-properties>
 		<property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
-	</system-properties>
-	
-	<system-properties>
 		<property name="app.config" value="WEB-INF/application.properties"/>
 	</system-properties>
 	
