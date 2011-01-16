@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="com.google.appengine.api.users.UserServiceFactory, 
-com.google.appengine.api.users.UserService,
-com.google.appengine.api.users.User" 
-%>
 
-<% UserService userService = UserServiceFactory.getUserService(); %>
+<%
+String url = (String) request.getAttribute("page");
+%>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -27,23 +25,9 @@ com.google.appengine.api.users.User"
 				<div id="titre">
 										
 				</div>
-			
-				<% 
 				
-					String url = (String) request.getAttribute("page");
-				
-					try { %>
-					    
-					    <jsp:include page="<%=url%>"/>
-					    
-					<%} catch(Exception e) { %>
-					    
-					    <jsp:include page="/view/404.jsp"/>
-					    
-					<%} %>
-				
-				<!--  -->
-				
+				<jsp:include page="<%=url%>"/>
+								
 			</div>
 		
 			<jsp:include page="/layout/footer.jsp"/>

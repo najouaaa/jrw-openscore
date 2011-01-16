@@ -1,11 +1,12 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<jsp:useBean id="label" class="org.jredway.bean.BienvenueBean"/>
 
 <div id="bienvenue">
 
-	<h1>Bienvenue sur openScore !</h1>
+	<h1><jsp:getProperty name="label" property="titre" /></h1>
 
-	<p>Je vous souhaite la bienvenue sur l'application java openScore un gestionnaire de score pour le golf, totalement gratuit. 
-	Vous pourrez ainsi enregistrer vos score, les consulter et les partager, le tout dans votre navigateur web préféré.</p>
+	<p><jsp:getProperty name="label" property="message" /></p>
 	
 	<img id="" src="/img/gg.png"/>
 	

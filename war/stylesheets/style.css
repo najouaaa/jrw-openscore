@@ -112,6 +112,11 @@ label {
 	margin-bottom:20px;
 }
 
+#inscrit input {
+	float:right;
+	margin-right:350px;
+}
+
 #sauve {
 	margin-top:20px;
 	margin-left:150px;
