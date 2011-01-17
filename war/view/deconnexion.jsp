@@ -11,9 +11,7 @@
 	<p><jsp:getProperty name="label" property="question"/></p>
 	
 	<form method="post" action="/openscore/deconnexion">
-	
 		<input type="submit" value="${label.bouton}" id="confirm" />
-	
 	</form>
 	
 </div>

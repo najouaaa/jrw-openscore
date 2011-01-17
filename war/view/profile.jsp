@@ -3,7 +3,9 @@
 <%@ page isELIgnored="false"%>
 
 <jsp:useBean id="label" class="org.jredway.bean.ProfileBean" />
-<jsp:useBean id="uti" class="org.jredway.bean.UtilisateurBean" />
+<c:catch>
+	<jsp:useBean id="uti" class="org.jredway.bean.UtilisateurBean" />
+</c:catch>
 
 <c:choose>
 	
@@ -14,15 +16,10 @@
 			<h2><jsp:getProperty name="label" property="titreModifier"/></h2>
 	
 				<form method="post" action="/openscore/modifierprofile">
-
 					<jsp:getProperty name="label" property="nom"/><input type="text" name="nom" value="${uti.nom}"/><br/><br/>
-	
 					<jsp:getProperty name="label" property="prenom"/><input type="text" name="prenom" value="${uti.prenom}"/><br/><br/>
-	
 					<jsp:getProperty name="label" property="index"/><input type="text" name="index" value="${uti.index}"/><br/><br/>
-	
 					<input type="submit" value="Sauvegarder" id="sauve"/>
-
 				</form>
 
 		</div>
@@ -36,15 +33,10 @@
 			<h2><jsp:getProperty name="label" property="titreCreation"/></h2>
 	
 				<form method="post" action="/openscore/creerprofile">
-
 					<jsp:getProperty name="label" property="nom"/><input type="text" name="nomVide"/><br/><br/>
-	
 					<jsp:getProperty name="label" property="prenom"/><input type="text" name="prenomVide"/><br/><br/>
-	
 					<jsp:getProperty name="label" property="index"/><input type="text" name="indexVide"/><br/><br/>
-	
 					<input type="submit" value="Sauvegarder" id="sauve"/>
-
 				</form>
 
 		</div>

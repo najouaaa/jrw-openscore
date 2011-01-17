@@ -16,7 +16,6 @@ String url = (String) request.getAttribute("page");
 	<div id="fenetre">
 
 		<div id="saut">
-			
 		</div>
 		
 		<div id="page">
@@ -25,8 +24,7 @@ String url = (String) request.getAttribute("page");
 		
 			<div id="affichage">
 				
-				<div id="titre">
-										
+				<div id="titre">						
 				</div>
 				
 				<jsp:include page="<%=url%>"/>

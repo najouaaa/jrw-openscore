@@ -5,9 +5,7 @@
 <div id="bienvenue">
 
 	<h1><jsp:getProperty name="label" property="titre" /></h1>
-
 	<p><jsp:getProperty name="label" property="message" /></p>
-	
 	<img id="" src="/img/gg.png"/>
 	
 </div>
