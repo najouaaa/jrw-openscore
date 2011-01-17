@@ -1,9 +1,11 @@
 <%@ page contentType="text/html; charset=utf-8" pageEncoding="UTF-8" %>
 
+<<jsp:useBean id="label" class="org.jredway.bean.ErreurBean"/>
+
 <div id="erreur">
 
-	<h1>- Erreur 404 -</h1>
-	<p>La page que vous demander n'existe pas !</p>
-	<a href="/openscore">Retour à l'acceuil</a>
+	<h1><jsp:getProperty name="label" property="titre"/></h1>
+	<p><jsp:getProperty name="label" property="message"/></p>
+	<a href="/openscore"><jsp:getProperty name="label" property="bouton"/></a>
 
 </div>

@@ -31,4 +31,12 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>CreerProfile</servlet-name>
 		<url-pattern>/openscore/creerprofile</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>Deconnexion</servlet-name>
+		<servlet-class>org.jredway.dopost.DeconnexionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Deconnexion</servlet-name>
+		<url-pattern>/openscore/deconnexion</url-pattern>
+	</servlet-mapping>
 </web-app>
