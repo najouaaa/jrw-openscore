@@ -16,7 +16,7 @@ public class UtilisateurBean {
 
 	public UtilisateurBean() {
 		BaseUtilisateur membre = new BaseUtilisateur();
-		compte = membre.getUtilisateur().getCompte().toString();
+		compte = membre.getUtilisateur().getCompte().getNickname();
 		nom = membre.getUtilisateur().getNom();
 		prenom = membre.getUtilisateur().getPrenom();
 		index = membre.getUtilisateur().getIndex();
