@@ -19,7 +19,11 @@
 					</c:catch>
 					
 					<c:if test="${not empty off}">
-						
+						<img id="mmd" src="/img/mmd.png"/> <br/><br/>	
+						<jsp:getProperty name="label" property="lBonjour"/><br/><br/>
+						<jsp:getProperty name="label" property="lCompte"/> <span class="info"></span><br/>
+						<jsp:getProperty name="label" property="lIndex"/> <span class="info"></span><br/>
+						<jsp:getProperty name="label" property="lPartie"/> <span class="info"></span><br/>
 					</c:if>
 					
 				</div>
