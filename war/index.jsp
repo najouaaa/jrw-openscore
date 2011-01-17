@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored="false"%>
 
 <%
 String url = (String) request.getAttribute("page");
@@ -10,6 +12,7 @@ String url = (String) request.getAttribute("page");
 <jsp:include page="/layout/head.jsp"/>
 
 <body>
+
 	<div id="fenetre">
 
 		<div id="saut">
@@ -17,7 +20,7 @@ String url = (String) request.getAttribute("page");
 		</div>
 		
 		<div id="page">
-		
+			
 			<jsp:include page="/layout/menu.jsp"/>
 		
 			<div id="affichage">
@@ -37,4 +40,5 @@ String url = (String) request.getAttribute("page");
 	</div>
 	
 </body>
+
 </html>
