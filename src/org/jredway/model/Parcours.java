@@ -8,6 +8,12 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+/**
+ * Classe représentant l'entité Utilisateur
+ * 
+ * @author killian.b
+ * @version 1.0.0
+ */
 @PersistenceCapable(detachable="true")
 public class Parcours {
     

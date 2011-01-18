@@ -10,7 +10,13 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import java.util.logging.Logger;
 
-
+/**
+ * Classe servlet servant de contrôleur pour
+ * l'application (MVC)
+ * 
+ * @author killian.b
+ * @version 1.0.0
+ */
 @SuppressWarnings("serial")
 public class OpenScoreServlet extends HttpServlet {
     
@@ -20,12 +26,27 @@ public class OpenScoreServlet extends HttpServlet {
     private String url = new String();
     private static final Logger log = Logger.getLogger(OpenScoreServlet.class.getName());
     
-    // Constructeur : de la servlet
+    /**
+     * Constructeur de la servlet avec log pour contrôle
+     * de l'état
+     * 
+     * @param config
+     * @throws ServletException qui gère les exceptions
+     * @since 1.0.0
+     */
     public void init(ServletConfig config) throws ServletException {
         log.info("Init servlet: on");
     }
     
-    // Controller : m�thode get
+    /**
+     * Méthode GET qui sert pour la redirection vers les vues
+     * apropriées
+     * 
+     * @param req
+     * @param resp
+     * @throws IOException, ServletException
+     * @since 1.0.0
+     */
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         this.userService = UserServiceFactory.getUserService();
         this.user = userService.getCurrentUser();
@@ -33,12 +54,21 @@ public class OpenScoreServlet extends HttpServlet {
         
         log.info("Parameter page: "+this.url);
         
+        /*
+         * récupère le paramètre GET puis charge
+         * la vue correspondante
+         */
         if(req.getParameter("page") != null) {   
             url = "/view/" + url + ".jsp";
             this.page = url;
             log.info("Load page: "+this.page);
         } else this.page = "/view/bienvenue.jsp"; 
 
+        /*
+         * contrôle si l'utilisateur est connecté
+         * si connecté redirige sur acceuil
+         * sinon crée une url de login
+         */
         if (this.user != null) {
             req.setAttribute("page", page);
             RequestDispatcher dispatch = req.getRequestDispatcher("/index.jsp");

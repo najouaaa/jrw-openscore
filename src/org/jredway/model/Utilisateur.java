@@ -8,9 +8,21 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+/**
+ * Entité Utilisateur
+ * 
+ * @author killian
+ * @version 1.0.0
+ */
 @PersistenceCapable(detachable="true")
 public class Utilisateur {
     
+    /**
+     * Champs clé primaire
+     * 
+     * @see 
+     * @since 1.0.0
+     */
     @PrimaryKey
     @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
     private Key key;
@@ -27,8 +39,6 @@ public class Utilisateur {
     @Persistent
     private int index;
     
-    
-
     public Utilisateur(User compte, String nom, String prenom,int index) {
         this.compte = compte;
         this.nom = nom;
