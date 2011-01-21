@@ -9,12 +9,35 @@ import java.util.logging.Logger;
 
 import org.jredway.openscore.OpenScoreServlet;
 
-
+/**
+ * Classe bean qui charge les properties
+ * pour les jsp
+ * 
+ * @author killian.b
+ * @version 1.0.0
+ */
 public class ProfileBean {
     
     private static final Logger log = Logger.getLogger(OpenScoreServlet.class.getName());
+    
+    /**
+     * Attributs pour les labels de la jsp
+     * 
+     * @see ProfileBean#getTitreCreation()
+     * @see ProfileBean#getTitreModifier()
+     * @see ProfileBean#getNom()
+     * @see ProfileBean#getPrenom()
+     * @see ProfileBean#getIndex()
+     * @since 1.0.0
+     */
     private String titreCreation, titreModifier, nom, prenom, index;
 
+    /**
+     * Constructeur bean en fonction des properties
+     * 
+     * @throws IOException
+     * @since 1.0.0
+     */
     public ProfileBean() throws IOException {
         
         Properties myProps = new Properties();

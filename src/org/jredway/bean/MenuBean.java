@@ -8,12 +8,30 @@ import java.util.logging.Logger;
 
 import org.jredway.openscore.OpenScoreServlet;
 
-
+/**
+ * Classe bean qui charge les properties
+ * pour la jsp menu
+ * 
+ * @author killian.b
+ * @version 1.0.0
+ */
 public class MenuBean {
     
     private static final Logger log = Logger.getLogger(OpenScoreServlet.class.getName());
+    
+    /**
+     * Attributs pour les labels de la jsp
+     * 
+     * @since 1.0.0
+     */
     private String lBonjour, lIndex, lCompte, lPartie, lTitrePartie, lTitreProfile, lAjouter, lCharger, lSupprimer, lModifier, lDeconnexion;
 
+    /**
+     * Constructeur du bean qui charge les properties
+     * 
+     * @throws IOException
+     * @since 1.0.0
+     */
     public MenuBean() throws IOException {
         
         Properties myProps = new Properties();

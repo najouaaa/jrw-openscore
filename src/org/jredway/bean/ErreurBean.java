@@ -8,12 +8,33 @@ import java.util.logging.Logger;
 
 import org.jredway.openscore.OpenScoreServlet;
 
-
+/**
+ * Classe bean pour la gestion des
+ * erreur dans la jsp
+ * 
+ * @author killian.b
+ * @version 1.0.0
+ */
 public class ErreurBean {
     
     private static final Logger log = Logger.getLogger(OpenScoreServlet.class.getName());
+    
+    /**
+     * Attributs du bean
+     * 
+     * @see ErreurBean#getTitre()
+     * @see ErreurBean#getMessage()
+     * @see ErreurBean#getBouton()
+     * @since 1.0.0
+     */
     private String titre, message, bouton;
 
+    /**
+     * Cosntructeur bean qui charge les properties
+     * 
+     * @throws IOException
+     * @since 1.0.0
+     */
     public ErreurBean() throws IOException {
         
         Properties myProps = new Properties();

@@ -8,12 +8,32 @@ import java.util.logging.Logger;
 
 import org.jredway.openscore.OpenScoreServlet;
 
-
+/**
+ * Classe bean pour la gestion des
+ * déconnexion dans la jsp
+ * 
+ * @author killian.b
+ * @version 1.0.0
+ */
 public class DeconnexionBean {
     
     private static final Logger log = Logger.getLogger(OpenScoreServlet.class.getName());
+    
+    /**
+     * Attributs bean
+     * 
+     * @see DeconnexionBean#getQuestion()
+     * @see DeconnexionBean#getBouton()
+     * @since 1.0.0
+     */
     private String question, bouton;
 
+    /**
+     * Constructeur bean qui charge les properties
+     * 
+     * @throws IOException
+     * @since 1.0.0
+     */
     public DeconnexionBean() throws IOException {
         
         Properties myProps = new Properties();
