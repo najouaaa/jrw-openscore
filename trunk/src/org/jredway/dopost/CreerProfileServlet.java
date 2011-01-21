@@ -8,12 +8,38 @@ import com.google.appengine.api.users.UserServiceFactory;
 
 import javax.servlet.http.*;
 
+/**
+ * Classe servlet permettant de gérer les POST la 
+ * création de profile Utilisateurs
+ * 
+ * @author killian.b
+ * @version 1.0.0
+ */
 @SuppressWarnings("serial")
 public class CreerProfileServlet extends HttpServlet {
     
+    /**
+     * Attribut UserService
+     * 
+     * @since 1.0.0
+     */
     private UserService userService = null;
+    
+    /**
+     * Attribut User
+     * 
+     * @since 1.0.0
+     */
     private User user = null;
     
+    /**
+     * Méthode permettant la gestion des flux POST
+     * 
+     * @param req
+     * @param resp
+     * @throws IOException
+     * @since 1.0.0
+     */
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         this.userService = UserServiceFactory.getUserService();
         this.user = userService.getCurrentUser();

@@ -8,12 +8,32 @@ import java.util.logging.Logger;
 
 import org.jredway.openscore.OpenScoreServlet;
 
-
+/**
+ * Classe bean pour la gestion du
+ * message d'acceuil dans la jsp
+ * 
+ * @author killian.b
+ * @version 1.0.0
+ */
 public class BienvenueBean {
     
     private static final Logger log = Logger.getLogger(OpenScoreServlet.class.getName());
+    
+    /**
+     * Attributs du bean
+     * 
+     * @see BienvenueBean#getTitre()
+     * @see BienvenueBean#getMessage()
+     * @since 1.0.0
+     */
     private String titre, message;
 
+    /**
+     * Constructeur bean qui charge les properties
+     * 
+     * @throws IOException
+     * @since 1.0.0
+     */
     public BienvenueBean() throws IOException {
         
         Properties myProps = new Properties();
