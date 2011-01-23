@@ -1,24 +1,15 @@
 <%@ page contentType="text/html; charset=utf-8" pageEncoding="UTF-8" %>
-<%@ page import="org.jredway.model.BaseUtilisateur,
-com.google.appengine.api.users.UserServiceFactory, 
-com.google.appengine.api.users.UserService,
+<%@ page import="org.jredway.model.BaseParcours,
 com.google.appengine.api.users.User,
-javax.jdo.PersistenceManager,
-javax.jdo.Query,
-org.jredway.model.Utilisateur,
-org.jredway.model.PMF" 
+com.google.appengine.api.users.UserService,
+com.google.appengine.api.users.UserServiceFactory" 
 %>
 
 <%
-
 UserService userService = UserServiceFactory.getUserService();
 User user = userService.getCurrentUser();
 
-BaseUtilisateur membre = new BaseUtilisateur();
-PersistenceManager pm = PMF.get().getPersistenceManager();
-
-Query query = pm.newQuery(Utilisateur.class,":p.contains(compte)");
-
-out.println("<p>"+membre.existe()+"</p>");
-out.println(query.execute(user));
+BaseParcours test = new BaseParcours();
+int trou[] = {1,2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18};
+//test.ajouter(user, "chassieu", "jaune", trou);
 %>

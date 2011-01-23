@@ -85,102 +85,42 @@ public class Utilisateur {
         this.index = index;
     }
 
-    /**
-     * Retourne la clé généré
-     * 
-     * @return key
-     * @since 1.0.0
-     */
     public Key getKey() {
         return key;
     }
 
-    /**
-     * Modifie la clé
-     * 
-     * @param key
-     * @since 1.0.0
-     */
     public void setKey(Key key) {
         this.key = key;
     }
 
-    /**
-     * Retourne le compte User
-     * 
-     * @return compte
-     * @since 1.0.0
-     */
     public User getCompte() {
         return compte;
     }
 
-    /**
-     * Modifie le compte User
-     * 
-     * @param compte
-     * @since 1.0.0
-     */
     public void setCompte(User compte) {
         this.compte = compte;
     }
 
-    /**
-     * Retourne le nom associé au compte
-     * 
-     * @return nom
-     * @since 1.0.0
-     */
     public String getNom() {
         return nom;
     }
 
-    /**
-     * Modifie le nom associé au compte
-     * 
-     * @param nom
-     * @since 1.0.0
-     */
     public void setNom(String nom) {
         this.nom = nom;
     }
 
-    /**
-     * Retourne le prénom associé au compte 
-     * 
-     * @return prenom
-     * @since 1.0.0
-     */
     public String getPrenom() {
         return prenom;
     }
 
-    /**
-     * Modifie le prenom associé au compte
-     * 
-     * @param prenom
-     * @since 1.0.0
-     */
     public void setPrenom(String prenom) {
         this.prenom = prenom;
     }
 
-    /**
-     * Modifie l'index de l'entité
-     * 
-     * @param index
-     * @since 1.0.0
-     */
     public void setIndex(int index) {
         this.index = index;
     }
 
-    /**
-     * Retourne l'index de l'entité
-     * 
-     * @return index
-     * @since 1.0.0
-     */
     public int getIndex() {
         return index;
     } 
