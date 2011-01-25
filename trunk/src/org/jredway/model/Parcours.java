@@ -1,6 +1,8 @@
 package org.jredway.model;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.logging.Logger;
 
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.users.User;
@@ -10,6 +12,8 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import org.jredway.openscore.OpenScoreServlet;
+
 /**
  * Classe représentant l'entité Utilisateur
  * 
@@ -18,6 +22,8 @@ import javax.jdo.annotations.PrimaryKey;
  */
 @PersistenceCapable(detachable="true")
 public class Parcours {
+    
+    private static final Logger log = Logger.getLogger(OpenScoreServlet.class.getName());
     
     /**
      * Champs clé primaire
@@ -52,6 +58,16 @@ public class Parcours {
     private String nomParcours;
     
     /**
+     * Champs date du parcours
+     * 
+     * @see Parcours#getDateParcours()
+     * @see Parcours#setDateParcours(dateParcours)
+     * @since 1.0.0
+     */
+    @Persistent
+    private Date dateParcours;
+    
+    /**
      * Champs nom du parcours
      * 
      * @see Parcours#getNomParcours()
@@ -80,14 +96,15 @@ public class Parcours {
      * @param depart
      * @param trou
      */
-    public Parcours(User compte, String nomParcours, String depart, int trou[]) {
-        int i;
+    public Parcours(User compte, String nomParcours, String depart, ArrayList<Integer> trou, Date date) {
+        
+        log.info("5.5");
         this.compte = compte;
         this.nomParcours = nomParcours;
         this.depart = depart;
-        for(i=1;i<19;i++) {
-            this.trou.add(trou[i]);
-        }
+        this.trou = trou;
+        log.info("6.5");
+        this.dateParcours = date;
     }
     
     public User getCompte() {
@@ -116,6 +133,22 @@ public class Parcours {
 
     public Key getKey() {
         return key;
+    }
+
+    public void setDateParcours(Date dateParcours) {
+        this.dateParcours = dateParcours;
+    }
+
+    public Date getDateParcours() {
+        return dateParcours;
+    }
+
+    public void setTrou(ArrayList<Integer> trou) {
+        this.trou = trou;
+    }
+
+    public ArrayList<Integer> getTrou() {
+        return trou;
     }
     
 }
