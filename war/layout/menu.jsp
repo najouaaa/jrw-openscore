@@ -32,7 +32,7 @@
 			
 					<h3><a href="#"><jsp:getProperty name="label" property="lTitrePartie"/></a></h3>
 			    	<div id="partie">
-						<a href="/openscore?page=partie"><img id="img" src="/img/ajouter.png"/><jsp:getProperty name="label" property="lAjouter"/></a><br/><br/>
+						<a href="/openscore?page=creationPartie"><img id="img" src="/img/ajouter.png"/><jsp:getProperty name="label" property="lAjouter"/></a><br/><br/>
 						<a href="chargerPartie"><img id="img" src="/img/charger.png"/><jsp:getProperty name="label" property="lCharger"/></a><br/><br/>
 						<a href="supprimerPartie"><img id="img" src="/img/supp.png"/><jsp:getProperty name="label" property="lSupprimer"/></a><br/><br/>
 					</div>

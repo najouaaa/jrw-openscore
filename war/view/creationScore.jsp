@@ -3,6 +3,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page isELIgnored="false"%>
 
+<jsp:useBean id="label" class="org.jredway.bean.CreationScoreBean" />
+
 <div id="wrapSaisi">
 
 	<span id="titre"></span>
@@ -12,11 +14,11 @@
 			<c:forEach var="i" begin="0" end="18" step="1">
 				<c:if test="${i==0}">
 					<tr>
-    					<td class="N"><span id="">Trou</span></td>
-    					<td class="P"><span id="">Par</span></td>
-    					<td class="H"><span id="">Hcp</span></td>
-    					<td class="D"><span id="">Distance</span></td>
-    					<td><span id="">Score</span></td>
+    					<td class="N"><span id=""><jsp:getProperty property="trou" name="label"/></span></td>
+    					<td class="P"><span id=""><jsp:getProperty property="par" name="label"/></span></td>
+    					<td class="H"><span id=""><jsp:getProperty property="hcp" name="label"/></span></td>
+    					<td class="D"><span id=""><jsp:getProperty property="distance" name="label"/></span></td>
+    					<td><span id=""><jsp:getProperty property="score" name="label"/></span></td>
   					</tr>
 				</c:if>
 				<c:if test="${i>0}">
@@ -30,8 +32,8 @@
   				</c:if>
 			</c:forEach>
 		</table>
-		<a href="/openscore?page=creationPartie" class="jbouton">Retour</a>
-		<input type="submit" value="Sauvegarder" class="jbouton"/>
+		<a href="/openscore?page=creationPartie" class="jbouton"><jsp:getProperty property="retour" name="label"/></a>
+		<input type="submit" value="${label.sauve}" class="jbouton"/>
 	</form>
 	
 </div>
