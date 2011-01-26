@@ -31,11 +31,11 @@ String url = (String) request.getAttribute("page");
 								
 			</div>
 		
-			<jsp:include page="/layout/footer.jsp"/>
-		
 		</div>
 	
 	</div>
+	
+	<jsp:include page="/layout/footer.jsp"/>
 	
 </body>
 
