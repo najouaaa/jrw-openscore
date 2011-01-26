@@ -39,4 +39,12 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>Deconnexion</servlet-name>
 		<url-pattern>/openscore/deconnexion</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>CreationPartie</servlet-name>
+		<servlet-class>org.jredway.dopost.CreationPartieServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreationPartie</servlet-name>
+		<url-pattern>/openscore/CreationPartie</url-pattern>
+	</servlet-mapping>
 </web-app>
