@@ -126,8 +126,90 @@ label {
 	text-align:center;
 }
 
+#wrapSaisi {
+	text-align:center;
+}
 
+#titre {
+	margin-left:15%;
+	margin-bottom: -20px;
+}
 
+.saisi {
+	width:30px;
+}
 
+table.sample {
+	text-align:center;
+	margin-left:195px;
+	margin-bottom:0px;
+	border-width: 0px;
+	border-spacing: 3px;
+	border-style: none;
+	border-color: black;
+	border-collapse: collapse;
+}
+
+table.sample th {
+	border-width: 1px;
+	padding: 4px;
+	border-style: solid;
+	border-color: black;
+	-moz-border-radius: 0px 0px 0px 0px;
+}
+
+table.sample td {
+	border-width: 1px;
+	padding: 4px;
+	border-style: solid;
+	border-color: black;
+	-moz-border-radius: 0px 0px 0px 0px;
+}
+
+.N {
+	background-color:#428c53;
+	color:white;
+}
+
+.P {
+	background-color:#5fb472;
+	color:black;
+}
+
+.H {
+	background-color:#b4dcbd;
+	color:black;
+}
+
+.Jaune {
+	background-color:yellow;
+	color:black;
+}
+
+.Noir {
+	background-color:black;
+	color:white;
+}
+
+.Blanc {
+	background-color:white;
+	color:black;
+}
+
+.Rouge {
+	background-color:red;
+	color:white;
+}
+
+.Bleu {
+	background-color:blue;
+	color:white;
+}
+
+#creation {
+	margin-top:150px;
+	margin-left:13px;
+	margin-bottom:20px;	
+}
 
 

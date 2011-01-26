@@ -4,4 +4,5 @@ $(function(){
 	$("#deco").button();
 	
 	$('#confirm').button();
+	$('.jbouton').button();
 });
