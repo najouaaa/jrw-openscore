@@ -60,5 +60,7 @@ $(document).ready(function() {
 		   
 		   		// changer la couleur des colonnes en fonction des du param depart GET
 				$('.D').addClass(valeur[2]);
+				$('#pParcours').val(valeur[1]);
+				$('#pDepart').val(valeur[2]);
 		}
 );

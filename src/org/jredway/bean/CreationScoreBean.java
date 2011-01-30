@@ -24,7 +24,7 @@ public class CreationScoreBean {
      * 
      * @since 1.0.0
      */
-    private String trou, par, distance, hcp, score, retour, sauve;
+    private String trou, par, distance, hcp, score, retour, sauve, date;
     
     /**
      * Méthode permettant la récupération
@@ -51,6 +51,7 @@ public class CreationScoreBean {
         score = myProps.getProperty("app.champs.tabscore");
         retour = myProps.getProperty("app.champs.bnretour");
         sauve = myProps.getProperty("app.champs.bnsauvegarder");
+        date = myProps.getProperty("app.champs.tabdate");
         MyInputStream.close();
     }
 
@@ -108,6 +109,14 @@ public class CreationScoreBean {
 
     public void setSauve(String sauve) {
         this.sauve = sauve;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getDate() {
+        return date;
     }
     
 }

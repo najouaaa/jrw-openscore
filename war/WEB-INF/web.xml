@@ -47,4 +47,28 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>CreationPartie</servlet-name>
 		<url-pattern>/openscore/CreationPartie</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>SuppressionPartie</servlet-name>
+		<servlet-class>org.jredway.dopost.SupprimerPartieServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SuppressionPartie</servlet-name>
+		<url-pattern>/openscore/SupprimerPartie</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ChargerPartie</servlet-name>
+		<servlet-class>org.jredway.dopost.ChargerPartieServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChargerPartie</servlet-name>
+		<url-pattern>/openscore/ChargerPartie</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ModifierPartie</servlet-name>
+		<servlet-class>org.jredway.dopost.ModifierPartieServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModifierPartie</servlet-name>
+		<url-pattern>/openscore/ModifierPartie</url-pattern>
+	</servlet-mapping>
 </web-app>
