@@ -1,3 +1,5 @@
+/* GLOBAL */
+
 body{
 	background: #1BB1E6 url(../img/backg.png) repeat-x;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -23,6 +25,8 @@ body{
 	margin: auto;
 }
 
+/* MENU */
+
 #menu{
 	background-image: url("../img/bleuef.png");
 	float:left;
@@ -34,6 +38,8 @@ body{
 #ssmenu{
 	margin-top:50px;
 }
+
+/* AFFICHAGE PRINCIPAL */
 
 #affichage{
 	background-image:url("../img/bWindow.jpg");
@@ -49,7 +55,7 @@ body{
 }
 
 #mmd{
-	margin-left: 50px;
+	margin-left: 20px;
 	margin-top: 20px;
 }
 
