@@ -131,8 +131,7 @@ label {
 }
 
 #titre {
-	margin-left:15%;
-	margin-bottom: -20px;
+	margin-left:8%;
 }
 
 .saisi {
@@ -141,8 +140,10 @@ label {
 
 table.sample {
 	text-align:center;
-	margin-left:195px;
-	margin-bottom:0px;
+	margin-top:40px;
+	margin-left:40px;
+	margin-right:40px;
+	margin-bottom:40px;
 	border-width: 0px;
 	border-spacing: 3px;
 	border-style: none;
@@ -164,6 +165,14 @@ table.sample td {
 	border-style: solid;
 	border-color: black;
 	-moz-border-radius: 0px 0px 0px 0px;
+}
+
+#tabAller {
+	float:left;
+}
+
+#tabRetour {
+	float:right;
 }
 
 .N {
@@ -212,4 +221,9 @@ table.sample td {
 	margin-bottom:20px;	
 }
 
+#suppression {
+	margin-top:150px;
+	margin-left:13px;
+	margin-bottom:20px;	
+}
 

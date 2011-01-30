@@ -5,6 +5,7 @@ import javax.jdo.Query;
 
 import org.jredway.openscore.OpenScoreServlet;
 
+import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
@@ -44,14 +45,15 @@ public class BaseParcours {
      * 
      * @see PMF
      * @param compte
-     * @param nom
-     * @param prenom
-     * @param index
+     * @param nomParcours
+     * @param depart
+     * @param trou
+     * @param date
      * @since 1.0.0
      */
-    public void ajouter(User compte, String nomParours, String depart, ArrayList<Integer> trou, Date date){
+    public void ajouter(User compte, String nomParcours, String depart, ArrayList<Integer> trou, Date date){
         PersistenceManager pm = PMF.get().getPersistenceManager();
-        this.parcours = new Parcours(compte, nomParours, depart, trou, date);
+        this.parcours = new Parcours(compte, nomParcours, depart, trou, date);
         try {
             pm.makePersistent(parcours);
         } finally {
@@ -64,17 +66,55 @@ public class BaseParcours {
      * dans la bdd
      * 
      * @see PMF
-     * @param compte
-     * @param date
+     * @param key
      * @since 1.0.0
      */
-    public void supprimer(User compte, Date date) {
+    public void supprimer(Key key) {
         PersistenceManager pm = PMF.get().getPersistenceManager();
-        Query query = pm.newQuery(Parcours.class);
-        query.declareImports("import com.google.appengine.api.users.User; import java.util.Date;");
-        query.setFilter("compte == pCompte && dateParcours == pDate");
-        query.declareParameters("User pCompte, Date pDate");
-        query.deletePersistentAll(compte, date);
+        Query query = pm.newQuery(Parcours.class,":p.contains(key)");
+        query.deletePersistentAll(key);
+    }
+    
+    /**
+     * Méthode qui charge de l'utilisateur
+     * en fonction d'une date
+     * 
+     * @param key
+     * @return detached
+     */
+    @SuppressWarnings("unchecked")
+    public Parcours charger(Key key) {
+        PersistenceManager pm = PMF.get().getPersistenceManager();
+        Parcours uti, detached = null;
+        
+        Query query = pm.newQuery(Parcours.class,":p.contains(key)");
+        List<Parcours> results = (List<Parcours>) query.execute(key);
+        
+        try {
+            uti = pm.getObjectById(Parcours.class,
+                    results.get(0).getKey().getId());
+            detached = pm.detachCopy(uti);
+        } finally {
+            pm.close();
+        }
+        return detached;
+    }
+    
+    /**
+     * Mise à jour des informations du
+     * parcours envoyer en paramètre
+     * 
+     * @see PMF
+     * @param e
+     * @since 1.0.0
+     */
+    public void modifier(Parcours e) {
+        PersistenceManager pm = PMF.get().getPersistenceManager();
+        try {
+            pm.makePersistent(e);
+        } finally {
+            pm.close();
+        }
     }
     
 }

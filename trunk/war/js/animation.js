@@ -5,4 +5,5 @@ $(function(){
 	
 	$('#confirm').button();
 	$('.jbouton').button();
+	$('.JHide').hide();
 });
