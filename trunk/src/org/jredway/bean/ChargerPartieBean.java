@@ -46,7 +46,7 @@ public class ChargerPartieBean {
         
         StringBuilder tmp = new StringBuilder();
         tmp.append("<span id=\"titre\"></span> \n");
-        tmp.append("<form method=\"post\" action=\"/openscore/ModifierPartie\"> \n");
+        tmp.append("<form id=\"confirmC\" name=\"confirmC\" method=\"post\" action=\"/openscore/ModifierPartie\"> \n");
         tmp.append("<input type=\"text\" name=\"pParcours\" id=\"pParcours\" class=\"JHide\"/> \n");
         tmp.append("<input type=\"text\" name=\"pDepart\" id=\"pDepart\" class=\"JHide\"/> \n");
         tmp.append("<input type=\"text\" name=\"pKey\" id=\"pKey\" class=\"JHide\" value=\""+sKey+"\" /> \n");
@@ -64,7 +64,8 @@ public class ChargerPartieBean {
             tmp.append("<td class=\"P\"><span id=\"P"+i+"\"></span></td> \n");
             tmp.append("<td class=\"H\"><span id=\"H"+i+"\"></span></td> \n");
             tmp.append("<td class=\"D\"><span id=\"D"+i+"\"></span></td> \n");
-            tmp.append("<td><input class=\"saisi\" type=\"text\" name=\"S"+i+"\" value=\""+partie.getTrou().get(i-1)+"\" /></td> \n");
+            tmp.append("<td><input class=\"saisi\" type=\"text\" id=\"S"+i+"\" name=\"S"+i+"\" "+
+            		    "value=\""+partie.getTrou().get(i-1)+"\" /></td> \n");
             tmp.append("</tr> \n");
         }
         tmp.append("</table> \n");
@@ -83,7 +84,8 @@ public class ChargerPartieBean {
             tmp.append("<td class=\"P\"><span id=\"P"+i+"\"></span></td> \n");
             tmp.append("<td class=\"H\"><span id=\"H"+i+"\"></span></td> \n");
             tmp.append("<td class=\"D\"><span id=\"D"+i+"\"></span></td> \n");
-            tmp.append("<td><input class=\"saisi\" type=\"text\" name=\"S"+i+"\" value=\""+partie.getTrou().get(i-1)+"\" /></td> \n");
+            tmp.append("<td><input class=\"saisi\" type=\"text\" id=\"S"+i+"\" name=\"S"+i+"\" "+
+            		    "value=\""+partie.getTrou().get(i-1)+"\" /></td> \n");
             tmp.append("</tr> \n");
         }
         tmp.append("</tr> \n");
@@ -91,7 +93,7 @@ public class ChargerPartieBean {
         tmp.append("<br/> \n");
         tmp.append("<br/> \n");
         tmp.append("<a href=\"/openscore?page=chargerPartie\" class=\"jbouton\">"+clabel.getRetour()+"</a> \n");
-        tmp.append("<input type=\"submit\" value=\""+label.getModifier()+"\" class=\"jbouton\"/> \n");
+        tmp.append("<input id=\"modifierScore\" type=\"submit\" value=\""+label.getModifier()+"\" class=\"jbouton\"/> \n");
         tmp.append("</form>");
         affichageParcours = tmp.toString();
         

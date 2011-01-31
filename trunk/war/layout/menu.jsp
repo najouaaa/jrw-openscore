@@ -15,7 +15,6 @@
 						<jsp:getProperty name="label" property="lBonjour"/><br/><br/>
 						<jsp:getProperty name="label" property="lCompte"/> <span class="info"><jsp:getProperty name="uti" property="compte"/></span><br/>
 						<jsp:getProperty name="label" property="lIndex"/> <span class="info"><jsp:getProperty name="uti" property="index"/></span><br/>
-						<jsp:getProperty name="label" property="lPartie"/> <span class="info"></span><br/>
 					</c:catch>
 					
 					<c:if test="${not empty off}">
