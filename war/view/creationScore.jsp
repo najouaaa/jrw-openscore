@@ -3,13 +3,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page isELIgnored="false"%>
 
+<c:import url="./js/confirm/confirm.html" />
+
 <jsp:useBean id="label" class="org.jredway.bean.CreationScoreBean" />
 
 <div id="wrapSaisi">
 
 	<span id="titre"></span>
 
-	<form method="post" action="/openscore/CreationPartie">
+	<form id="confirmS" name="confirmS" method="post" action="/openscore/CreationPartie">
 		<input type="text" name="pParcours" id="pParcours" class="JHide"/>
 		<input type="text" name="pDepart" id="pDepart" class="JHide"/>
 		<table border="1" class="sample" id="tabAller">
@@ -29,7 +31,7 @@
     					<td class="P"><span id="P${i}"></span></td>
     					<td class="H"><span id="H${i}"></span></td>
     					<td class="D"><span id="D${i}"></span></td>
-    					<td><input class="saisi" type="text" name="S${i}"/></td>
+    					<td><input class="saisi" type="text" id="S${i}" name="S${i}"/></td>
   					</tr>
   				</c:if>
 			</c:forEach>
@@ -51,7 +53,7 @@
     					<td class="P"><span id="P${i}"></span></td>
     					<td class="H"><span id="H${i}"></span></td>
     					<td class="D"><span id="D${i}"></span></td>
-    					<td><input class="saisi" type="text" name="S${i}"/></td>
+    					<td><input class="saisi" type="text" id="S${i}" name="S${i}"/></td>
   					</tr>
   				</c:if>
 			</c:forEach>
@@ -75,7 +77,7 @@
 		<br/>
 		<br/>
 		<a href="/openscore?page=creationPartie" class="jbouton"><jsp:getProperty property="retour" name="label"/></a>
-		<input type="submit" value="${label.sauve}" class="jbouton"/>
+		<input type="submit" value="${label.sauve}" id="validerScore" class="jbouton"/>
 	</form>
 	
 </div>
