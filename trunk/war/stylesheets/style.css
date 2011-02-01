@@ -1,13 +1,8 @@
 /* GLOBAL */
 
-@FONT-FACE {
-	font-family: "GeosansLight";
-	src:url("./font/GeosansLight.ttf");
-}
-
 body{
 	background: #4B99B5 url("../img/point.png") repeat;
-	font-family: "GeosansLight";
+	font-family: 'Ubuntu', arial, serif;
 }
 
 #fenetre{
@@ -53,7 +48,7 @@ body{
 }
 
 #membre{
-	font-family: "GeosansLight";
+	font-family: 'Ubuntu', arial, serif;
 	font-size: 15px;
 	margin-left:10px;
 	margin-right:10px;
