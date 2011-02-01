@@ -147,8 +147,8 @@ label {
 table.sample {
 	text-align:center;
 	margin-top:40px;
-	margin-left:50px;
-	margin-right:50px;
+	margin-left:30px;
+	margin-right:30px;
 	margin-bottom:40px;
 	border-width: 0px;
 	border-spacing: 3px;
@@ -196,27 +196,27 @@ table.sample td {
 	color:black;
 }
 
-.Jaune {
+.jaune {
 	background-color:yellow;
 	color:black;
 }
 
-.Noir {
+.noir {
 	background-color:black;
 	color:white;
 }
 
-.Blanc {
+.blanc {
 	background-color:white;
 	color:black;
 }
 
-.Rouge {
+.rouge {
 	background-color:red;
 	color:white;
 }
 
-.Bleu {
+.bleu {
 	background-color:blue;
 	color:white;
 }
