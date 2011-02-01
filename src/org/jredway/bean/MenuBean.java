@@ -24,7 +24,7 @@ public class MenuBean {
      * 
      * @since 1.0.0
      */
-    private String lBonjour, lIndex, lCompte, lPartie, lTitrePartie, lTitreProfile, lAjouter, lCharger, lSupprimer, lModifier, lDeconnexion;
+    private String lBonjour, lIndex, lCompte, lPartie, lTitrePartie, lTitreProfile;
 
     /**
      * Constructeur du bean qui charge les properties
@@ -50,11 +50,6 @@ public class MenuBean {
         lPartie = myProps.getProperty("app.champs.labelpartie");
         lTitrePartie = myProps.getProperty("app.champs.titremenupartie");
         lTitreProfile = myProps.getProperty("app.champs.titremenuprofile");
-        lAjouter = myProps.getProperty("app.champs.sstitrepartieajouter");
-        lCharger = myProps.getProperty("app.champs.sstitrepartiecharger");
-        lSupprimer = myProps.getProperty("app.champs.sstitrepartiesupprimer");
-        lModifier = myProps.getProperty("app.champs.sstitrepartiemodifier");
-        lDeconnexion = myProps.getProperty("app.champs.sstitrepartiedeconnexion");
         MyInputStream.close();
     }
 
@@ -80,26 +75,6 @@ public class MenuBean {
 
 	public String getlTitreProfile() {
 		return lTitreProfile;
-	}
-
-	public String getlAjouter() {
-		return lAjouter;
-	}
-
-	public String getlCharger() {
-		return lCharger;
-	}
-
-	public String getlSupprimer() {
-		return lSupprimer;
-	}
-
-	public String getlModifier() {
-		return lModifier;
-	}
-
-	public String getlDeconnexion() {
-		return lDeconnexion;
 	}
     
 }

@@ -7,9 +7,9 @@
 String url = (String) request.getAttribute("page");
 %>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-
 <jsp:include page="/layout/head.jsp"/>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <body>
 

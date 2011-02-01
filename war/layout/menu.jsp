@@ -31,23 +31,23 @@
 			
 					<h3><a href="#"><jsp:getProperty name="label" property="lTitrePartie"/></a></h3>
 			    	<div id="partie">
-						<a href="/openscore?page=creationPartie"><img id="img" src="/img/ajouter.png"/><jsp:getProperty name="label" property="lAjouter"/></a><br/><br/>
-						<a href="/openscore?page=chargerPartie"><img id="img" src="/img/charger.png"/><jsp:getProperty name="label" property="lCharger"/></a><br/><br/>
-						<a href="/openscore?page=supprimerPartie"><img id="img" src="/img/supp.png"/><jsp:getProperty name="label" property="lSupprimer"/></a><br/><br/>
+						<a href="/openscore?page=creationPartie"><img class="img" src="/img/ajouter.png"/></a>
+						<a href="/openscore?page=chargerPartie"><img class="img" src="/img/charger.png"/></a>
+						<a href="/openscore?page=supprimerPartie"><img class="img" src="/img/supp.png"/></a>
 					</div>
 				
 			    	<h3><a href="#"><jsp:getProperty name="label" property="lTitreProfile"/></a></h3>
 					<div id="profile">
 						<br/><br/>
-						<a href="/openscore?page=profile"><img id="img" src="/img/edit.png"/><jsp:getProperty name="label" property="lModifier"/></a><br/><br/>
-						<a href="/openscore?page=deconnexion"><img id="img" src="/img/deco.png"/><jsp:getProperty name="label" property="lDeconnexion"/></a>
+						<a href="/openscore?page=profile"><img class="img"  src="/img/edit.png"/></a><br/><br/>
+						<a href="/openscore?page=deconnexion"><img class="img"  src="/img/deco.png"/></a>
+						<a href="#"><img class="img"  src="/img/nothing.png"/></a>
 						<br/><br/>
 					</div>
 			
 				</div>
 				
 				<div >
-					<img src="/img/jrwlogo.png" alt="Powered by JRed Way" id="jrw"/>
 					<img src="http://code.google.com/appengine/images/appengine-silver-120x30.gif" alt="Powered by Google App Engine" id="pub"/>
 				</div>
 			

@@ -1,16 +1,19 @@
 /* GLOBAL */
 
+@FONT-FACE {
+	font-family: "GeosansLight";
+	src:url("./font/GeosansLight.ttf");
+}
+
 body{
-	background: #1BB1E6 url(../img/backg.png) repeat-x;
-	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background: #4B99B5 url("../img/point.png") repeat;
+	font-family: "GeosansLight";
 }
 
 #fenetre{
-	background-image: url("../img/back.png");
 	height:720px;
 	width:820px;
 	margin: 50px auto auto auto;
-	border: 1px solid #000;
 }
 
 #saut{
@@ -23,16 +26,17 @@ body{
 	height:700px;
 	width:800px;
 	margin: auto;
+	border: 1px solid #000;
 }
 
 /* MENU */
 
 #menu{
-	background-image: url("../img/bleuef.png");
+	background-color:#000;
 	float:left;
 	height:700px;
 	width:180px;
-	color:white;
+	color: gray;
 }
 
 #ssmenu{
@@ -49,27 +53,35 @@ body{
 }
 
 #membre{
-	font-size: 12px;
+	font-family: "GeosansLight";
+	font-size: 15px;
 	margin-left:10px;
 	margin-right:10px;
 }
 
 #mmd{
-	margin-left: 20px;
+	margin-left: 30px;
 	margin-top: 20px;
+	width: 90px;
+	height: 90px;
 }
 
-#img{
-	border-style: none;
+.img{
+	border-style: none none solid none;
+	border-color: black;
+	border-bottom-width:1px; 
 }
 
 #partie{
 	font-size: 10px;
-	height:170px;
+	height:105px;
+	overflow: hidden;
 }
 
 #profile{
-	font-size: 10px;
+	font-size: 0px;
+	overflow: hidden;
+	background-color: #727070 !important;
 }
 
 #bienvenue{
@@ -83,19 +95,12 @@ body{
 }
 
 .info{
-	color:#66ff66;
+	color:white;
 }
 
 #pub {
+	margin-top:130px;
 	margin-left:30px;
-}
-
-#jrw {
-	height:100px;
-	width:150px;
-	margin-top:20px;
-	margin-left:13px;
-	margin-bottom:20px;
 }
 
 #erreur {
@@ -147,8 +152,8 @@ label {
 table.sample {
 	text-align:center;
 	margin-top:40px;
-	margin-left:40px;
-	margin-right:40px;
+	margin-left:50px;
+	margin-right:50px;
 	margin-bottom:40px;
 	border-width: 0px;
 	border-spacing: 3px;
